@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="40" height="40" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="20" cy="20" r="20" fill="red"/>
+</svg>
+
+<!--
+
+cd "%f";fileFullPath="/home/user/Videos/youtubeupload$(date -Iminutes).mp4"&&ffmpeg -safe 0 -f concat -i <(find . -type f -name '*.MP4' -printf "file '$PWD/%p'\n" | sort) -c copy $fileFullPath&&chromium https://studio.youtube.com/channel/UC_fq6O1z6muwyID-ZHS1s9Q/videos?d=ud
+
+OR
+
+ffmpeg -safe 0 -f concat -i <(find . -type f -name '*.MP4' -printf "file '$PWD/%p'\n" | sort) -c copy ~/youtubeupload"$(date -Iminutes).mp4"&&chromium https://studio.youtube.com/channel/?d=ud&& exit
+
+-->
