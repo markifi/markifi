@@ -5,7 +5,7 @@
 
 <!--
 
-cd "%f";fileFullPath="/home/user/Videos/youtubeupload$(date -Iminutes).mp4"&&ffmpeg -safe 0 -f concat -i <(find . -type f -name '*.MP4' -printf "file '$PWD/%p'\n" | sort) -c copy $fileFullPath&&chromium https://studio.youtube.com/channel/UC_fq6O1z6muwyID-ZHS1s9Q/videos?d=ud
+cd "%f";fileFullPath="/home/user/Videos/youtubeupload$(date -Iminutes).mp4"&&ffmpeg -safe 0 -f concat -i <(find . -type f -name '*.MP4' -printf "file '$PWD/%p'\n" | sort) -c copy $fileFullPath&&explorer "`"https://studio.youtube.com/channel/UC_fq6O1z6muwyID-ZHS1s9Q/videos?d=ud"`"
 
 OR
 
