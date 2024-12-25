@@ -9,6 +9,6 @@ cd "%f";fileFullPath="/home/user/Videos/youtubeupload$(date -Iminutes).mp4"&&ffm
 
 OR
 
-ffmpeg -safe 0 -f concat -i <(find ./DCIM -type f -name '*.MP4' -printf "file '$PWD/%p'\n" | sort) -c copy ~/youtubeupload"$(date -Iminutes).mp4"&&xdg-open https://studio.youtube.com/channel/?d=ud; mv MISC DCIM; rename DCIM $(date +"%Y-%m-%dT%H.%M") DCIM; exit 
+ffmpeg -safe 0 -f concat -i <(find ./DCIM -type f -name '*.MP4' -printf "file '$PWD/%p'\n" | sort) -c copy ~/youtubeupload"$(date -Iminutes).mp4"&&xdg-open https://studio.youtube.com/channel/?d=ud&& mv MISC DCIM; rename DCIM $(date +"%Y-%m-%dT%H.%M") DCIM; exit 
 
 -->
