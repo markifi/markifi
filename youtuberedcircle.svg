@@ -5,7 +5,7 @@
 
 <!--
 
-cd "%f";fileFullPath="/home/user/Videos/youtubeupload$(date -Iminutes).mp4"&&ffmpeg -safe 0 -f concat -i <(find . -type f -name '*.MP4' -printf "file '$PWD/%p'\n" | sort) -c copy $fileFullPath&&explorer "`"https://studio.youtube.com/channel/UC_fq6O1z6muwyID-ZHS1s9Q/videos?d=ud"`"
+cmd /c 'del D:\l.txt 2>nul & (for /r D:\DCIM %i in (*.MP4) do @echo file ''%i'') > D:\l.txt'; ffmpeg -safe 0 -f concat -i D:\l.txt -c copy $env:USERPROFILE\Videos\youtubeupload$(date -f yyyy-MM-ddTHHmm).mp4; if ($?) { ren D:\DCIM "youtubeupload$(date -f yyyy-MM-ddTHHmm)"; start https://studio.youtube.com/channel/?d=ud}
 
 OR
 
